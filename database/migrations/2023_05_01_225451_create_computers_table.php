@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('computers', function (Blueprint $table) {
             $table->id();
+            $table->integer('serial');
+            $table->string('marca');
+            $table->string('image');
+            $table->foreignId('state_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }

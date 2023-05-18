@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('i_u_s', function (Blueprint $table) {
             $table->id();
+            $table->string('name_iu');
+            $table->boolean('activo_iu');
             $table->timestamps();
         });
     }

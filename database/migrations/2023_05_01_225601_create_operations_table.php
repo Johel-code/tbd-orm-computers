@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('operations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('computer_id')->nullable()->constrained()->onDelete('set null');
+            $table->foreign('user_id');
             $table->timestamps();
         });
     }

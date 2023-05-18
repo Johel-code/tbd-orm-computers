@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('perifericos', function (Blueprint $table) {
             $table->id();
+            $table->string('periferico');
+            $table->string('marca');
+            $table->integer('serial');
+            $table->foreignId('computer_id')->nullable()->constrained('set null');
             $table->timestamps();
         });
     }

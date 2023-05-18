@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('funcions', function (Blueprint $table) {
             $table->id();
+            $table->string('name_function');
+            $table->boolean('activo_function');
             $table->timestamps();
         });
     }
